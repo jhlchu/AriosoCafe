@@ -74,7 +74,7 @@ img {
 	justify-content: center;
 }
 
-.navbar .nav a {
+.navbar > .nav > a {
 	margin: 0 1rem;
 }
 
