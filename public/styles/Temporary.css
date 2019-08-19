@@ -5,8 +5,7 @@
 }
 
 html {
-  background: url("https://firebasestorage.googleapis.com/v0/b/arioso-cafe.appspot.com/o/Media%2FBag%20Beans.jpg?alt=media&token=abd4b3c4-43fe-4126-950f-c3ccb80f60ef")
-    no-repeat center center fixed;
+  background: url("../Assets/Bag Beans.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
