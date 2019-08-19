@@ -183,16 +183,6 @@ main > h1 {
   animation-fill-mode: forwards;
 }
 
-/* Utilities */
-.btn {
-  animation-name: fadein;
-  animation-duration: 1s;
-  animation-delay: 1.25s;
-  opacity: 0;
-  animation-fill-mode: forwards;
-  transition: linear;
-}
-
 .section-hero {
   height: 30vh;
   background-image: url("../Assets/Bag_Optimized.jpg");
@@ -202,8 +192,8 @@ main > h1 {
 
 @media only screen and (max-width: 1000px) {
   .section-block {
-    height: 100vh;
-    grid-template: "img" 1fr "data" 2fr/ 100vw;
+    height: fit-content;
+    grid-template: "img" 1fr "data" 1fr/ 100%;
   }
 
   .section-block > img {
