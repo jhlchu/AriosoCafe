@@ -1,0 +1,184 @@
+* {
+	box-sizing: border-box;
+	/* color: black; */
+}
+
+:root {
+	--gradient-percentage: 70%;
+	--gradient-mid-width: 10px;
+	--gradient-mid: calc(var(--gradient-percentage) + var(--gradient-mid-width));
+	--gradient-shadow-start: calc(var(--gradient-mid) + 0.05%);
+	--gradient-shadow-width: 0.5%;
+	--gradient-shadow-end: calc(var(--gradient-shadow-start) + var(--gradient-shadow-width));
+	--gradient-color-gold: rgb(187, 150, 4);/* rgb(240, 197, 6) */
+}
+
+html, body {
+	height: 100vh;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+body {
+	background: linear-gradient(100deg,
+		#000 calc(var(--gradient-percentage) - 2px),
+		var(--gradient-color-gold) var(--gradient-percentage),
+		var(--gradient-color-gold) var(--gradient-mid),
+		#DDD var(--gradient-shadow-start),
+		#FFF var(--gradient-shadow-end)) no-repeat center center fixed;
+	/* overflow-x: hidden;
+	overflow-y: scroll; */
+}
+
+ul {
+	list-style: none;
+}
+
+.bg {
+	height: 100%;
+	display: grid;
+	position: relative;
+	grid-template-columns: 63.75% 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: " . RightSide";
+	z-index: 2;
+}
+
+.Right {
+	grid-column: 2/3;
+	display: grid;
+	grid-template-rows: 1fr 30%;
+	grid-template-columns: auto;
+}
+
+
+.BigCircle {
+	grid-area: 'RightSide';
+	position: absolute;
+	height: 366px;
+	width: 366px;
+	border-radius: 200px;
+	top: 4.26%;
+	right: 8.02%;
+	background-color: #c4df9b;
+}
+
+.SmallCircle {
+	grid-area: 'RightSide';
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	border-radius: 150px;
+	top: 61px;
+	right: 3.75%;
+	background-color: #f9ad81;
+}
+
+.GreyBox {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	grid-row: 2/3;
+	position: relative;
+	height: auto;
+	width: 40%;
+	/*
+	
+	bottom: 0;
+	right: 50px; */
+	left:0;
+	min-width: 734px;	
+
+	background-image: url("../Assets/CuveAdj_OnTransparent.webp");
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	vertical-align: bottom;
+}
+
+.navbar {
+	position: absolute;
+	right:0;
+	left:0;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	color:white;
+}
+
+.navbar .nav {
+	grid-auto-columns: 2/3;
+	display: flex;
+	justify-self: flex-end;
+	align-items: center;
+	justify-content: center;
+}
+
+.navbar .nav {
+	
+}
+
+
+@media only screen and (max-width: 830px) and (min-width: 530px) {
+	h1 {color:red}/* Ipad size */
+}
+
+
+@media only screen and (max-aspect-ratio: 4/3) and (max-width: 830px) {
+
+	:root {
+		--gradient-percentage: 85%;
+	}
+	html, body {
+		height: auto;
+		overflow: scroll;
+	}
+
+	body {
+		background: 
+		linear-gradient(0deg,
+			#000 calc(var(--gradient-percentage) - 2px),
+			var(--gradient-color-gold) var(--gradient-percentage),
+			var(--gradient-color-gold) var(--gradient-mid),
+			#DDD var(--gradient-shadow-start),
+			#FFF var(--gradient-shadow-end))  no-repeat  center center local;
+
+	}
+
+	.navbar {
+		position: absolute;
+		right:0;
+		left:0;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		color: black;
+	}
+
+	.bg {
+		height: 100vh;
+		grid-template-columns:1fr;
+		grid-template-rows: 30% auto;
+		grid-template-areas: "RightSide"
+							".";
+		/* overflow: visible; */
+	}
+
+	
+	body .bg:not(:first-child) {
+		/* background-color: #000; */
+	}
+
+	.GreyBox {
+		position: relative;
+		place-self: center;
+		grid-row: 1/2;
+		grid-column: 1/2;
+
+		height: 30vh;
+		width: 90%;
+		top: 15vh;
+		right: 0;
+		min-width: 0;
+		background-position: center;
+	}
+
+}
