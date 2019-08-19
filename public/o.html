@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="styles/o.css" />
   </head>
   <body>
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=Aex4mZMFJ7dHZ7jWxUqLtr975VuWpQimG-5QVmWm5ENXXek0cN_snIJZMsQQfw7C_sCURERgYg6WCcpI"
+      async
+    ></script>
     <nav class="nav">
       <a href="./o.html"><img src="./Assets/Logo_SVG.svg" class="logo"/></a>
       <ul class="nav-bar">
@@ -30,14 +34,21 @@
           <a href="./Beans/BossaNovaEspresso.html"
             ><button class="bg-primary">More</button></a
           >
+          <div id="paypal-button-container"></div>
         </main>
         <img
           src="https://firebasestorage.googleapis.com/v0/b/arioso-cafe.appspot.com/o/Media%2FBosaNova_Optimized.jpg?alt=media&token=65576416-8ba4-4716-ae5e-f3e9d7188fe0"
         />
       </section>
+      <section class="section-hero"></section>
     </main>
 
     <!-- 	<script src="https://kit.fontawesome.com/347082258b.js"></script>
 	<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/ce9c729baa98a115eb7138461/bd4ee0999579c45364e4e795d.js");</script> -->
+    <script src="./scripts/Paypal.js" ;></script>
+    <script>
+      testButton.render("#paypal-button-container");
+      // paypal.Buttons().render("#paypal-button-container");
+    </script>
   </body>
 </html>
