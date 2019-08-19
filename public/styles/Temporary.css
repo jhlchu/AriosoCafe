@@ -1,42 +1,78 @@
-@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700|Cormorant+Garamond:400,700|Libre+Caslon+Display&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Cinzel:400,700|Cormorant+Garamond:400,700|Libre+Caslon+Display&display=swap");
 
 :root {
-	--nav-font: 'Cormorant Garamond', serif;
+  --nav-font: "Cormorant Garamond", serif;
 }
 
-html { 
-  background: url('https://firebasestorage.googleapis.com/v0/b/arioso-cafe.appspot.com/o/Media%2FBag%20Beans.jpg?alt=media&token=abd4b3c4-43fe-4126-950f-c3ccb80f60ef') no-repeat center center fixed; 
+html {
+  background: url("https://firebasestorage.googleapis.com/v0/b/arioso-cafe.appspot.com/o/Media%2FBag%20Beans.jpg?alt=media&token=abd4b3c4-43fe-4126-950f-c3ccb80f60ef")
+    no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-origin: content-box;
+  background-position: 75% 25%;
 }
 
 * {
-	color: white;
-	box-sizing: border-box;
+  color: white;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: var(--nav-font);
-	
+  font-family: var(--nav-font);
 }
 
 .text {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%) translateX(-10%);
-	width: 100%;
-	text-align: right;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-10%);
+  width: 100%;
+  text-align: right;
 }
 
 h1 {
-	font-size: 5rem;
-	margin: 0;
+  font-size: 5rem;
+  margin: 0;
 }
 
 h2 {
-	font-size: 3rem;
-	margin: 0;
-	color: #555;
+  font-size: 3rem;
+  margin: 0;
+  color: rgb(255, 255, 255);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: ". text";
+  height: 100vh;
+}
+
+main > section {
+  grid-area: text;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+
+.logo {
+  width: 45vw;
+  height: auto;
+}
+
+@media only screen and (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas: "text";
+  }
+
+  main > section {
+    justify-self: right;
+
+    text-align: right;
+    margin: 1rem 3rem;
+    padding: 1rem;
+  }
 }
