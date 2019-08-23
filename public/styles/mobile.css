@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Cinzel:400,700|Cormorant+Garamond:400,700|Libre+Caslon+Display&display=swap");
+
+:root {
+  --nav-font: "Cormorant Garamond", serif;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--nav-font);
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  background: url("../Assets/Bag Beans.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-origin: content-box;
+  background-position: 75% 25%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: ". data";
+}
+
+.logo {
+  width: 45vw;
+  height: auto;
+  min-width: 250px;
+}
+
+main {
+  grid-area: data;
+  justify-self: right;
+  text-align: center;
+  color: white;
+  align-self: center;
+  margin-right: 0.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 0;
+  color: rgb(255, 255, 255);
+}
