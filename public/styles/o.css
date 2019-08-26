@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Cinzel:400,700|Cormorant+Garamond:400,700|Libre+Caslon+Display&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700|Cormorant+Garamond:400,700|Libre+Caslon+Display&display=swap');
 
 :root {
   --primary-color: #333333;
@@ -6,7 +6,7 @@
   --primary-dark-color: #ffffff;
   --overlay-color: rgba(0, 0, 0, 0.7);
 
-  --nav-font: "Cormorant Garamond", serif;
+  --nav-font: 'Cormorant Garamond', serif;
 }
 
 .primary {
@@ -44,7 +44,7 @@
 
 html,
 body {
-  width: 100vw;
+  width: 100%;
   line-height: 1.6;
 }
 
@@ -124,7 +124,7 @@ nav > ul li a:hover {
   display: grid;
   /* grid-template: "data img" / 2fr 1fr; */
   height: 80vh;
-  grid-template: "data img" / auto 40%;
+  grid-template: 'data img' / auto 40%;
 }
 
 .section-block > main {
@@ -186,7 +186,7 @@ main > h1 {
 
 .section-hero {
   height: 30vh;
-  background-image: url("../Assets/Bag_Optimized.jpg");
+  background-image: url('../Assets/Bag_Optimized.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -194,7 +194,7 @@ main > h1 {
 @media only screen and (max-width: 1000px) {
   .section-block {
     height: fit-content;
-    grid-template: "img" 1fr "data" 1fr/ 100%;
+    grid-template: 'img' 1fr 'data' 1fr/ 100%;
   }
 
   .section-block > img {
